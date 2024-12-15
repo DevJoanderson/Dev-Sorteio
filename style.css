@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000000;
+}
+
+.container {
+    text-align: center;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%; /* Imagem responsiva */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-top: 20px; /* Ajuste do topo para melhorar o espaçamento */
+}
+
+h1 {
+    color: #ffffff;
+    margin-top: 20px; /* Ajuste do topo */
+    font-size: 5vw; /* Ajusta o tamanho da fonte de forma responsiva */
+}
+
+.input-min, .input-max {
+    width: 90%; /* Usando largura relativa */
+    max-width: 342px; /* Define um limite máximo */
+    min-width: 250px; /* Define um limite mínimo para garantir que não fiquem muito pequenos */
+    margin: 10px 10px;
+    font-size: 24px; /* Tamanho da fonte ajustado */
+    height: 74px;
+    padding: 13px 233px 30px 16px;
+    border-radius: 15px;
+    border: 1px solid #353131;
+    opacity: 1; /* Alterado para visível */
+    color: #ffffff;
+    background-color: #353131;
+}
+
+section {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    padding: 10px; /* Adicionado padding para melhor responsividade */
+}
+
+.botao {
+    width: 90%; /* Usando largura relativa */
+    max-width: 342px; /* Define um limite máximo */
+    min-width: 250px; /* Define um limite mínimo para o botão */
+    height: 72px;
+    margin: 50px auto 0; /* Centraliza o botão (substitui o margin-left fixo) */
+    font-size: 24px; /* Ajustado para telas menores */
+    border-radius: 15px; 
+    opacity: 1; /* Alterado para visível */
+    color: #ffffff;
+    background-color: #0c9443;
+    cursor: pointer;
+    display: block; /* Garante que o botão seja um bloco para centralização */
+}
+
+.botao:hover {
+    background-color: #1a7212af;
+}
+
+/* Media Queries */
+
+/* Para telas com largura máxima de 1378px */
+@media screen and (max-width: 1378px) {
+    .container {
+        padding: 50px;
+        width: 100%;
+    }
+
+    img {
+        max-width: 90%; /* Imagem ocupa 90% da largura */
+    }
+}
+
+/* Para telas com largura máxima de 768px */
+@media screen and (max-width: 768px) {
+    .input-min, .input-max, .botao {
+        width: 80%; /* Ajuste para entradas e botões em telas menores */
+        font-size: 24px; /* Ajuste de tamanho de fonte */
+    }
+
+    h1 {
+        font-size: 6vw; /* Ajuste para o título em telas menores */
+    }
+
+    section {
+        padding: 10px;
+    }
+}
+
+/* Para telas com largura máxima de 480px */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 6vw; /* Maior ajuste para o título */
+    }
+
+    .input-min, .input-max, .botao {
+        width: 90%; /* Maior largura em telas muito pequenas */
+        font-size: 18px;
+    }
+
+    .currency-value, .currency-value-to-convert {
+        font-size: 16px; /* Ajuste de fonte */
+    }
+
+    button {
+        font-size: 14px; /* Ajuste de tamanho da fonte do botão */
+    }
+}
+
+/* Para telas com largura máxima de 330px */
+@media screen and (max-width: 330px) {
+    main {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .logo {
+        width: 200px; /* Logo menor em telas muito pequenas */
+    }
+}
